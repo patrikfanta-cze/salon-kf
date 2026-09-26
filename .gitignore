@@ -1,0 +1,7 @@
+# Podklady (letáky, stažené fotky) – nejsou součástí webu
+podklady/
+
+# Systémové soubory
+Thumbs.db
+desktop.ini
+.DS_Store
