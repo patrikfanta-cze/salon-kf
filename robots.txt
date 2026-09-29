@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://patrikfanta-cze.github.io/salon-kf/sitemap.xml

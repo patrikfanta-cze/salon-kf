@@ -21,9 +21,6 @@
   });
 
   /* ---------- záložky ---------- */
-  // Náhled (jedna stránka místo několika) si hash řídí sám – viz window.KF_PREVIEW.
-  var PREVIEW = !!window.KF_PREVIEW;
-  window.KF_TABS = {};
   document.querySelectorAll('[data-tabs]').forEach(function (group) {
     var tabs = group.querySelectorAll('.tab');
     function show(id, updateHash) {
@@ -38,16 +35,15 @@
       group.parentNode.querySelectorAll('[data-panel]').forEach(function (p) {
         p.classList.toggle('active', p.dataset.panel === id);
       });
-      if (updateHash && !PREVIEW && history.replaceState) history.replaceState(null, '', '#' + id);
+      if (updateHash && history.replaceState) history.replaceState(null, '', '#' + id);
       return true;
     }
     tabs.forEach(function (t) {
-      window.KF_TABS[t.dataset.tab] = show;
       t.addEventListener('click', function () { show(t.dataset.tab, true); });
     });
-    var initial = PREVIEW ? '' : location.hash.slice(1);
+    var initial = location.hash.slice(1);
     if (!initial || !show(initial, false)) show(tabs[0].dataset.tab, false);
-    if (!PREVIEW) window.addEventListener('hashchange', function () { show(location.hash.slice(1), false); });
+    window.addEventListener('hashchange', function () { show(location.hash.slice(1), false); });
   });
 
   /* ---------- galerie: filtr + lightbox ---------- */
