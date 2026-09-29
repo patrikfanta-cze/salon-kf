@@ -337,3 +337,6 @@ a.card:hover { transform: translateY(-4px); }
   .lightbox { padding: 60px 10px; }
   .lb-prev, .lb-next { top: auto; bottom: 14px; transform: none; }
 }
+.credit { text-align: center; margin-top: 8px; font-family: var(--sans); font-size: .62rem; letter-spacing: .12em; opacity: .55; }
+.credit a { border-bottom: 1px solid rgba(246, 242, 234, .3); }
+.credit a:hover { color: var(--gold-light); }
