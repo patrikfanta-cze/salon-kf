@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://patrikfanta-cze.github.io/salon-kf/sitemap.xml
+Sitemap: https://salon-kf.cz/sitemap.xml
