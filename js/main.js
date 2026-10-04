@@ -96,6 +96,13 @@
     });
   });
 
+  /* ---------- pruh recenzí: kopie karet pro plynulou smyčku ---------- */
+  document.querySelectorAll('.rs-track').forEach(function (track) {
+    Array.prototype.slice.call(track.children).forEach(function (card) {
+      var c = card.cloneNode(true); c.setAttribute('aria-hidden', 'true'); track.appendChild(c);
+    });
+  });
+
   /* ---------- rok v patičce ---------- */
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
