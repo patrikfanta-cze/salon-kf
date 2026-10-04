@@ -346,3 +346,19 @@ a.card:hover { transform: translateY(-4px); }
 .credit { text-align: center; margin-top: 8px; font-family: var(--sans); font-size: .62rem; letter-spacing: .12em; opacity: .8; }
 .credit a { border-bottom: 1px solid rgba(246, 242, 234, .3); }
 .credit a:hover { color: var(--gold-light); }
+
+/* ---------- identifikace, právní stránky ---------- */
+.legal-links { text-align: center; margin-top: 10px; font-family: var(--sans); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; }
+.legal-links a { border-bottom: 1px solid rgba(246, 242, 234, .35); }
+.legal-links a:hover { color: var(--gold-light); }
+.c-ident { margin-top: 18px; font-size: 1rem; color: var(--muted); line-height: 1.5; }
+.legal h2 { font-family: var(--serif); font-weight: 600; font-size: 1.6rem; color: var(--olive); margin: 34px 0 10px; text-transform: uppercase; letter-spacing: .03em; }
+.legal h3 { font-family: var(--serif); font-weight: 600; font-size: 1.25rem; color: var(--olive); margin: 18px 0 4px; }
+.legal p, .legal li { font-size: 1.12rem; }
+.legal p + p { margin-top: 10px; }
+.legal ul { margin: 8px 0 0 22px; }
+.legal li { margin-bottom: 6px; }
+.legal a { color: var(--olive); }
+.legal-lead { font-size: 1.25rem !important; }
+.legal-date { margin-top: 30px; font-style: italic; color: var(--muted); }
+.notfound { text-align: center; }
