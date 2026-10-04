@@ -21,9 +21,7 @@
 <meta name="twitter:description" content="Kosmetický salon K.F., Tyršova 138, 431 51 Klášterec nad Ohří. Telefon 777 592 495, e-mail kosmetickysalonk.f@seznam.cz.">
 <meta name="twitter:image" content="https://salon-kf.cz/img/og-nahled.jpg">
 <link rel="icon" href="img/logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -88,7 +86,11 @@
         </div>
       </div>
       <div class="map">
-        <iframe src="https://maps.google.com/maps?q=Tyr%C5%A1ova%20138%2C%20431%2051%20Kl%C3%A1%C5%A1terec%20nad%20Oh%C5%99%C3%AD&z=16&output=embed" title="Mapa – Tyršova 138, Klášterec nad Ohří" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <button class="map-load" type="button" data-src="https://maps.google.com/maps?q=Tyr%C5%A1ova%20138%2C%20431%2051%20Kl%C3%A1%C5%A1terec%20nad%20Oh%C5%99%C3%AD&z=16&output=embed">
+          <span class="map-load-btn">Zobrazit mapu</span>
+          <small>Tyršova 138, Klášterec nad Ohří</small>
+          <small class="map-note">Mapa se načte ze služby Google Maps až po kliknutí.</small>
+        </button>
       </div>
     </div>
   </section>

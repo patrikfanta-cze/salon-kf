@@ -10,10 +10,11 @@
   --olive: #3d4535;
   --olive-2: #4d5741;
   --sage: #7d8b6f;
-  --gold: #b08d48;
+  --gold: #9a7838;
+  --gold-text: #85652a;
   --gold-light: #d4bf92;
   --text: #3a3a36;
-  --muted: #6e6c64;
+  --muted: #58564f;
   --white: #fff;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'Montserrat', Arial, sans-serif;
@@ -52,7 +53,7 @@ a { color: inherit; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand img { width: 58px; height: 58px; }
 .brand span { font-family: var(--serif); font-size: 1.15rem; letter-spacing: .12em; text-transform: uppercase; color: var(--olive); line-height: 1.15; }
-.brand small { display: block; font-family: var(--sans); font-size: .58rem; letter-spacing: .3em; color: var(--gold); }
+.brand small { display: block; font-family: var(--sans); font-size: .58rem; letter-spacing: .3em; color: var(--gold-text); }
 
 .main-nav ul { display: flex; align-items: center; gap: 4px; list-style: none; }
 .main-nav a {
@@ -60,7 +61,7 @@ a { color: inherit; }
   font-family: var(--sans); font-size: .7rem; font-weight: 500; letter-spacing: .13em; text-transform: uppercase;
   text-decoration: none; color: var(--olive); transition: background .2s, color .2s;
 }
-.main-nav a:hover { color: var(--gold); }
+.main-nav a:hover { color: var(--gold-text); }
 .main-nav a.active { background: var(--beige); color: var(--olive); }
 .main-nav a.nav-cta { background: var(--olive); color: var(--cream); margin-left: 8px; }
 .main-nav a.nav-cta:hover, .main-nav a.nav-cta.active { background: var(--gold); color: var(--white); }
@@ -100,7 +101,7 @@ a { color: inherit; }
   font-family: var(--sans); font-size: .8rem; letter-spacing: .18em; text-transform: uppercase;
   color: var(--olive); max-width: 640px; margin: 0 auto; line-height: 2;
 }
-.kicker { font-family: var(--sans); font-size: .72rem; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
+.kicker { font-family: var(--sans); font-size: .72rem; letter-spacing: .3em; text-transform: uppercase; color: var(--gold-text); }
 
 section { padding: 60px 0; }
 .band { background: var(--cream-light); }
@@ -118,7 +119,7 @@ section { padding: 60px 0; }
   text-decoration: none; cursor: pointer; transition: background .2s, color .2s, border-color .2s;
   background: var(--olive); color: var(--cream);
 }
-.btn:hover { background: var(--gold); border-color: var(--gold); color: var(--white); }
+.btn:hover { background: var(--gold-text); border-color: var(--gold-text); color: var(--white); }
 .btn-ghost { background: transparent; color: var(--olive); }
 .btn-ghost:hover { background: var(--olive); border-color: var(--olive); color: var(--cream); }
 .btn-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 30px; }
@@ -126,7 +127,7 @@ section { padding: 60px 0; }
   font-family: var(--sans); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
   color: var(--olive); text-decoration: none; border-bottom: 1px solid var(--gold-light); padding-bottom: 3px;
 }
-.link-arrow:hover { color: var(--gold); }
+.link-arrow:hover { color: var(--gold-text); }
 
 /* ---------- úvodní stránka ---------- */
 .hero { position: relative; overflow: hidden; padding: 70px 0 80px; text-align: center; }
@@ -168,7 +169,7 @@ a.card:hover { transform: translateY(-4px); }
   padding: 12px 20px; border-radius: 30px; border: 1px solid var(--gold-light); background: transparent; color: var(--olive);
   cursor: pointer; transition: all .2s;
 }
-.tab:hover { border-color: var(--gold); color: var(--gold); }
+.tab:hover { border-color: var(--gold); color: var(--gold-text); }
 .tab.active { background: var(--olive); border-color: var(--olive); color: var(--cream); }
 .panel { display: none; animation: fade .35s ease; }
 .panel.active { display: block; }
@@ -187,7 +188,7 @@ a.card:hover { transform: translateY(-4px); }
   margin: 16px 0 18px; padding: 10px 0; border-top: 1px solid var(--gold-light); border-bottom: 1px solid var(--gold-light);
 }
 .price-tag span { font-family: var(--sans); font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--olive); }
-.price-tag b { font-family: var(--serif); font-size: 2rem; font-weight: 600; color: var(--gold); }
+.price-tag b { font-family: var(--serif); font-size: 2rem; font-weight: 600; color: var(--gold-text); }
 .service .look { font-family: var(--script); font-size: 1.7rem; color: var(--gold); line-height: 1.2; margin-bottom: 6px; }
 .hearts { list-style: none; font-size: 1.06rem; line-height: 1.45; flex: 1; }
 .hearts li { position: relative; padding-left: 20px; margin-bottom: 7px; }
@@ -200,14 +201,14 @@ a.card:hover { transform: translateY(-4px); }
 }
 .price-box + .price-box { margin-top: 26px; }
 .price-box h3 {
-  font-family: var(--serif); font-weight: 600; font-size: 1.6rem; text-transform: uppercase; color: var(--gold);
+  font-family: var(--serif); font-weight: 600; font-size: 1.6rem; text-transform: uppercase; color: var(--gold-text);
   border-bottom: 1px solid var(--gold-light); padding-bottom: 6px; margin-bottom: 14px; letter-spacing: .02em;
 }
-.price-box h3 small { font-size: 1rem; color: var(--gold); }
+.price-box h3 small { font-size: 1rem; color: var(--gold-text); }
 .row { display: grid; grid-template-columns: 1fr auto 7em; gap: 14px; align-items: baseline; padding: 7px 0; border-bottom: 1px dashed var(--beige); }
 .row:last-of-type { border-bottom: 0; }
 .row i { font-style: normal; font-family: var(--sans); font-size: .74rem; color: var(--muted); }
-.row b { text-align: right; font-weight: 600; font-size: 1.3rem; color: var(--gold); }
+.row b { text-align: right; font-weight: 600; font-size: 1.3rem; color: var(--gold-text); }
 .note { font-style: italic; color: var(--muted); font-size: 1.02rem; margin: 6px 0 10px; line-height: 1.5; }
 .price-box .btn { margin-top: 18px; }
 .valid { text-align: center; margin-top: 34px; }
@@ -259,7 +260,7 @@ a.card:hover { transform: translateY(-4px); }
   display: flex; align-items: center; justify-content: center; margin: 0 auto 22px;
 }
 .icon-circle svg { width: 46px; height: 46px; }
-.hl { font-family: var(--sans); font-weight: 500; font-size: 1.12rem; letter-spacing: .06em; text-transform: uppercase; color: var(--gold); margin-top: 6px; }
+.hl { font-family: var(--sans); font-weight: 500; font-size: 1.12rem; letter-spacing: .06em; text-transform: uppercase; color: var(--gold-text); margin-top: 6px; }
 .up { font-family: var(--sans); font-size: 1.02rem; letter-spacing: .06em; text-transform: uppercase; color: var(--olive); }
 .voucher strong { color: var(--olive); }
 .thanks { background: var(--beige); border-radius: var(--radius); padding: 22px; margin-top: 28px; }
@@ -272,10 +273,15 @@ a.card:hover { transform: translateY(-4px); }
 .c-item:last-child { border-bottom: 0; }
 .c-icon { flex: none; width: 50px; height: 50px; border-radius: 50%; background: var(--olive); display: flex; align-items: center; justify-content: center; }
 .c-icon svg { width: 22px; height: 22px; }
-.c-item small { display: block; font-family: var(--sans); font-size: .64rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
+.c-item small { display: block; font-family: var(--sans); font-size: .64rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-text); }
 .c-item a, .c-item span { font-size: 1.3rem; color: var(--olive); text-decoration: none; word-break: break-word; }
-.c-item a:hover { color: var(--gold); }
+.c-item a:hover { color: var(--gold-text); }
 .map { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); min-height: 380px; background: var(--beige); }
+.map-load { width: 100%; height: 100%; min-height: 380px; border: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: var(--olive); font-family: var(--serif); font-size: 1.1rem;
+  background: linear-gradient(rgba(246,242,234,.86), rgba(246,242,234,.86)), url("../img/galerie/salon-zrcadlo-lehatko.jpg") center / cover; }
+.map-load-btn { font-family: var(--sans); font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; border: 1px solid var(--olive); border-radius: 40px; padding: 14px 28px; transition: background .2s, color .2s; }
+.map-load:hover .map-load-btn, .map-load:focus-visible .map-load-btn { background: var(--olive); color: var(--cream); }
+.map-note { font-family: var(--sans); font-size: .66rem; color: var(--muted); max-width: 260px; text-align: center; }
 .map iframe { width: 100%; height: 100%; min-height: 380px; border: 0; display: block; }
 
 /* ---------- patička ---------- */
@@ -337,6 +343,6 @@ a.card:hover { transform: translateY(-4px); }
   .lightbox { padding: 60px 10px; }
   .lb-prev, .lb-next { top: auto; bottom: 14px; transform: none; }
 }
-.credit { text-align: center; margin-top: 8px; font-family: var(--sans); font-size: .62rem; letter-spacing: .12em; opacity: .55; }
+.credit { text-align: center; margin-top: 8px; font-family: var(--sans); font-size: .62rem; letter-spacing: .12em; opacity: .8; }
 .credit a { border-bottom: 1px solid rgba(246, 242, 234, .3); }
 .credit a:hover { color: var(--gold-light); }

@@ -86,6 +86,16 @@
     });
   }
 
+  /* ---------- mapa až po kliknutí (bez odesílání IP Googlu předem) ---------- */
+  document.querySelectorAll(".map-load").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var f = document.createElement("iframe");
+      f.src = btn.dataset.src; f.title = "Mapa – Tyršova 138, Klášterec nad Ohří";
+      f.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+      btn.replaceWith(f);
+    });
+  });
+
   /* ---------- rok v patičce ---------- */
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
