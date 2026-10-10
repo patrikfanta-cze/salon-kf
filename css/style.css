@@ -374,9 +374,11 @@ a.card:hover { transform: translateY(-4px); }
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
           mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
-.rs-track { display: flex; gap: 18px; width: max-content; padding: 4px 0 10px; animation: rs-run 60s linear infinite; }
-.reviews-strip:hover .rs-track { animation-play-state: paused; }
-@keyframes rs-run { from { transform: translateX(calc(-50% - 9px)); } to { transform: translateX(0); } }
+.rs-track { display: flex; gap: 18px; width: max-content; padding: 4px 18px 10px 0; }
+/* Pás posouvá JS: jede zleva doprava, jde chytit myší i prstem a přetáhnout */
+.rs-viewport.is-looping { cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.rs-viewport.is-looping .rs-track { will-change: transform; }
+.rs-viewport.is-dragging { cursor: grabbing; }
 .rs-card {
   flex: 0 0 auto; width: 320px; margin: 0; text-align: left;
   background: var(--cream-light); border: 1px solid var(--brush); border-radius: var(--radius);
@@ -389,9 +391,7 @@ a.card:hover { transform: translateY(-4px); }
   .reviews-strip { margin-top: 34px; }
   .rs-card { width: 260px; padding: 14px 15px; }
   .rs-card blockquote { font-size: 1.02rem; }
-  .rs-track { animation-duration: 45s; }
 }
 @media (prefers-reduced-motion: reduce) {
   .rs-viewport { overflow-x: auto; }
-  .rs-track { animation: none; }
 }
