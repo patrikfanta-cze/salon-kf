@@ -244,6 +244,7 @@ a.card:hover { transform: translateY(-4px); }
 /* ---------- o mně ---------- */
 .prose p + p { margin-top: 16px; }
 .quote { font-family: var(--script); font-size: 2.2rem; color: var(--gold); text-align: center; line-height: 1.3; margin-top: 30px; }
+.salon-main { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 55%; border-radius: var(--radius); margin-bottom: 16px; }
 .photos-2 { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
 .photos-2 img { width: 100%; height: 380px; object-fit: cover; border-radius: var(--radius); }
 .brand-box { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; background: var(--white); border-radius: var(--radius); padding: 44px; box-shadow: var(--shadow); }
@@ -337,6 +338,7 @@ a.card:hover { transform: translateY(-4px); }
   .gallery, .strip { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .photos-2 { grid-template-columns: 1fr; }
   .photos-2 img { height: 240px; }
+  .salon-main { aspect-ratio: 4 / 5; object-position: 50% 60%; }
   .stats { grid-template-columns: 1fr; gap: 18px; }
   .foot-grid { grid-template-columns: 1fr; text-align: center; }
   .site-footer img { margin: 0 auto; }
