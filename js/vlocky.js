@@ -1,4 +1,4 @@
-/* Padající zlaté vločky v pozadí. Každá se při pádu otáčí a převrací jako lesklé konfety.
+/* Padající zlaté vločky v pozadí. Každá má tvar sněhové vločky a při pádu se otáčí, naklání a kolébá.
    Plátno nereaguje na kliknutí, vypne se při „omezení pohybu“ v systému a zastaví při skryté záložce. */
 (function () {
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -44,23 +44,31 @@
   }
 
   function draw(f) {
-    var scaleY = Math.cos(f.flip);                    // −1…1, při ≈0 je střípek „na hraně“
-    var shine = 0.55 + 0.45 * Math.abs(scaleY);       // na hraně se ztlumí, naplocho se třpytí
-    var light = scaleY > 0 ? 1 : 0.82;                // druhá strana je o něco tmavší
+    var tilt = Math.cos(f.flip);                      // −1…1, vločka se při pádu naklání
+    var scaleY = 0.62 + 0.38 * tilt;                  // 0,24…1: tvar zůstane poznatelný, jen se zplošťuje
+    var shine = 0.65 + 0.35 * Math.abs(tilt);         // při naklonění se zatřpytí
+    var light = tilt > 0 ? 1 : 0.85;
     ctx.save();
     ctx.translate(f.x + Math.sin(f.swayPhase) * f.swayAmp, f.y);
     ctx.rotate(f.rot);
     ctx.scale(1, scaleY);
-    ctx.globalAlpha = f.alpha * shine;
-    ctx.fillStyle = 'rgb(' + Math.round(f.c[0] * light) + ',' + Math.round(f.c[1] * light) + ',' + Math.round(f.c[2] * light) + ')';
-    var s = f.size;
-    ctx.beginPath();                                  // nepravidelný čtyřúhelník jako kousek zlaté fólie
-    ctx.moveTo(-s, -s * f.skew * 0.6);
-    ctx.lineTo(s * 0.9, -s * f.skew);
-    ctx.lineTo(s, s * f.skew * 0.5);
-    ctx.lineTo(-s * 0.8, s * f.skew);
-    ctx.closePath();
-    ctx.fill();
+    ctx.globalAlpha = Math.min(1, f.alpha * shine + 0.1);
+    ctx.strokeStyle = "rgb(" + Math.round(f.c[0] * light) + "," + Math.round(f.c[1] * light) + "," + Math.round(f.c[2] * light) + ")";
+    ctx.lineCap = "round";
+    ctx.lineWidth = Math.max(0.9, f.size * 0.22);
+    var r = f.size * 1.25;                            // poloměr vločky
+    ctx.beginPath();
+    for (var k = 0; k < 6; k++) {                     // šest ramen, každé s dvojicí větviček
+      var ang = k * Math.PI / 3, ca = Math.cos(ang), sa = Math.sin(ang);
+      ctx.moveTo(0, 0);
+      ctx.lineTo(ca * r, sa * r);
+      var bx = ca * r * 0.58, by = sa * r * 0.58, bl = r * 0.34;
+      ctx.moveTo(bx, by);
+      ctx.lineTo(bx + Math.cos(ang + 0.85) * bl, by + Math.sin(ang + 0.85) * bl);
+      ctx.moveTo(bx, by);
+      ctx.lineTo(bx + Math.cos(ang - 0.85) * bl, by + Math.sin(ang - 0.85) * bl);
+    }
+    ctx.stroke();
     ctx.restore();
   }
 
