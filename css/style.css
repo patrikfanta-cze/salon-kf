@@ -53,7 +53,7 @@ a { color: inherit; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand img { width: 58px; height: 58px; }
 .brand span { font-family: var(--serif); font-size: 1.15rem; letter-spacing: .12em; text-transform: uppercase; color: var(--olive); line-height: 1.15; }
-.brand small { display: block; font-family: var(--sans); font-size: .58rem; letter-spacing: .3em; color: var(--gold-text); }
+.brand small { display: block; font-family: var(--sans); font-size: .7rem; letter-spacing: .3em; color: var(--gold-text); }
 
 .main-nav ul { display: flex; align-items: center; gap: 4px; list-style: none; }
 .main-nav a {
@@ -64,7 +64,7 @@ a { color: inherit; }
 .main-nav a:hover { color: var(--gold-text); }
 .main-nav a.active { background: var(--beige); color: var(--olive); }
 .main-nav a.nav-cta { background: var(--olive); color: var(--cream); margin-left: 8px; }
-.main-nav a.nav-cta:hover, .main-nav a.nav-cta.active { background: var(--gold); color: var(--white); }
+.main-nav a.nav-cta:hover, .main-nav a.nav-cta.active { background: var(--gold-text); color: var(--white); }
 
 .menu-toggle {
   display: none; background: none; border: 0; cursor: pointer; width: 46px; height: 46px;
@@ -134,7 +134,7 @@ section { padding: 60px 0; }
 .hero-logo { width: 230px; margin: 0 auto 6px; }
 .hero h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2.2rem, 5vw, 3rem); color: var(--olive); letter-spacing: .03em; }
 .tagline { font-family: var(--sans); font-size: .78rem; letter-spacing: .38em; text-transform: uppercase; color: var(--olive); margin-top: 10px; }
-.tagline b { color: var(--gold); font-weight: 400; margin: 0 .6em; }
+.tagline b { color: var(--gold-text); font-weight: 400; margin: 0 .6em; }
 .hero .place { font-style: italic; color: var(--muted); margin-top: 10px; }
 .hero .script { font-size: 2.4rem; display: block; margin-top: 18px; }
 
@@ -236,7 +236,7 @@ a.card:hover { transform: translateY(-4px); }
   position: absolute; background: rgba(246, 242, 234, .12); border: 0; color: var(--cream); cursor: pointer;
   width: 50px; height: 50px; border-radius: 50%; font-size: 1.6rem; line-height: 1; display: flex; align-items: center; justify-content: center;
 }
-.lb-btn:hover { background: var(--gold); }
+.lb-btn:hover { background: var(--gold-text); }
 .lb-close { top: 16px; right: 16px; }
 .lb-prev { left: 14px; top: 50%; transform: translateY(-50%); }
 .lb-next { right: 14px; top: 50%; transform: translateY(-50%); }
@@ -274,7 +274,7 @@ a.card:hover { transform: translateY(-4px); }
 .c-item:last-child { border-bottom: 0; }
 .c-icon { flex: none; width: 50px; height: 50px; border-radius: 50%; background: var(--olive); display: flex; align-items: center; justify-content: center; }
 .c-icon svg { width: 22px; height: 22px; }
-.c-item small { display: block; font-family: var(--sans); font-size: .64rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-text); }
+.c-item small { display: block; font-family: var(--sans); font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-text); }
 .c-item a, .c-item span { font-size: 1.3rem; color: var(--olive); text-decoration: none; word-break: break-word; }
 .c-item a:hover { color: var(--gold-text); }
 .map { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); min-height: 380px; background: var(--beige); }
@@ -282,7 +282,7 @@ a.card:hover { transform: translateY(-4px); }
   background: linear-gradient(rgba(246,242,234,.74), rgba(246,242,234,.74)), url("../img/salon-hlavni.jpg") 50% 75% / cover; }
 .map-load-btn { font-family: var(--sans); font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; border: 1px solid var(--olive); border-radius: 40px; padding: 14px 28px; transition: background .2s, color .2s; }
 .map-load:hover .map-load-btn, .map-load:focus-visible .map-load-btn { background: var(--olive); color: var(--cream); }
-.map-note { font-family: var(--sans); font-size: .66rem; color: var(--muted); max-width: 260px; text-align: center; }
+.map-note { font-family: var(--sans); font-size: .75rem; color: var(--muted); max-width: 260px; text-align: center; }
 .map iframe { width: 100%; height: 100%; min-height: 380px; border: 0; display: block; }
 
 /* ---------- patička ---------- */
@@ -295,7 +295,7 @@ a.card:hover { transform: translateY(-4px); }
 .site-footer a { text-decoration: none; }
 .site-footer a:hover { color: var(--gold-light); }
 .site-footer .script { color: var(--gold-light); font-size: 1.9rem; }
-.copy { text-align: center; margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(246, 242, 234, .15); font-family: var(--sans); font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; opacity: .75; }
+.copy { text-align: center; margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(246, 242, 234, .15); font-family: var(--sans); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; opacity: .85; }
 
 /* ---------- mobil a tablet ---------- */
 .main-nav a, .brand span { white-space: nowrap; }
@@ -326,7 +326,7 @@ a.card:hover { transform: translateY(-4px); }
   .leaf-l { width: 140px; left: -30px; }
   .leaf-r { width: 130px; }
   .lead { font-size: .7rem; letter-spacing: .12em; }
-  .tagline { font-size: .64rem; letter-spacing: .22em; }
+  .tagline { font-size: .7rem; letter-spacing: .2em; }
   .hero { padding: 44px 0 56px; }
   .hero-logo { width: 180px; }
   section { padding: 44px 0; }
@@ -334,7 +334,7 @@ a.card:hover { transform: translateY(-4px); }
   .row { grid-template-columns: 1fr 5.6em; gap: 8px; }
   .row i { display: none; }
   .tabs { gap: 8px; }
-  .tab { padding: 10px 14px; font-size: .64rem; letter-spacing: .1em; }
+  .tab { padding: 10px 14px; font-size: .72rem; letter-spacing: .08em; }
   .gallery, .strip { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .photos-2 { grid-template-columns: 1fr; }
   .photos-2 img { height: 240px; }
@@ -345,12 +345,12 @@ a.card:hover { transform: translateY(-4px); }
   .lightbox { padding: 60px 10px; }
   .lb-prev, .lb-next { top: auto; bottom: 14px; transform: none; }
 }
-.credit { text-align: center; margin-top: 8px; font-family: var(--sans); font-size: .62rem; letter-spacing: .12em; opacity: .8; }
+.credit { text-align: center; margin-top: 8px; font-family: var(--sans); font-size: .72rem; letter-spacing: .12em; opacity: .9; }
 .credit a { border-bottom: 1px solid rgba(246, 242, 234, .3); }
 .credit a:hover { color: var(--gold-light); }
 
 /* ---------- identifikace, právní stránky ---------- */
-.legal-links { text-align: center; margin-top: 10px; font-family: var(--sans); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; }
+.legal-links { text-align: center; margin-top: 10px; font-family: var(--sans); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; }
 .legal-links a { border-bottom: 1px solid rgba(246, 242, 234, .35); }
 .legal-links a:hover { color: var(--gold-light); }
 .c-ident { margin-top: 18px; font-size: 1rem; color: var(--muted); line-height: 1.5; }
@@ -368,7 +368,7 @@ a.card:hover { transform: translateY(-4px); }
 /* ---------- pruh recenzí z Google (pod tlačítky v hero) ---------- */
 .reviews-strip { position: relative; margin-top: 46px; }
 .rs-head { font-family: var(--sans); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
-.rs-head .rs-stars { color: var(--gold); letter-spacing: 2px; margin-right: 6px; }
+.rs-head .rs-stars { color: var(--gold-text); letter-spacing: 2px; margin-right: 6px; }
 .rs-head a { color: var(--gold-text); font-weight: 600; text-decoration: none; }
 .rs-head a:hover { text-decoration: underline; }
 .rs-viewport {
@@ -386,7 +386,7 @@ a.card:hover { transform: translateY(-4px); }
   background: var(--cream-light); border: 1px solid var(--brush); border-radius: var(--radius);
   box-shadow: var(--shadow); padding: 16px 18px;
 }
-.rs-card .rs-stars { color: var(--gold); letter-spacing: 2px; font-size: .9rem; }
+.rs-card .rs-stars { color: var(--gold-text); letter-spacing: 2px; font-size: .9rem; }
 .rs-card blockquote { margin: 6px 0 8px; font-family: var(--serif); font-style: italic; font-size: 1.12rem; line-height: 1.35; color: var(--text); }
 .rs-card figcaption { font-family: var(--sans); font-size: .75rem; color: var(--muted); }
 @media (max-width: 600px) {
@@ -400,3 +400,6 @@ a.card:hover { transform: translateY(-4px); }
 
 /* ---------- padající zlaté vločky v pozadí ---------- */
 .flakes { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 40; }
+
+/* jen pro čtečky obrazovky (nadpisy panelů ceníku) */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
